@@ -1,0 +1,70 @@
+
+.telaPrincipal{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:100vh;
+  background-color:rgb(151, 171, 214);
+  padding: 30px;
+}
+
+.titulo{
+  color: rgb(33, 31, 48);
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.171);
+  text-align: center;
+  font-size: 3em;
+}
+
+.containerLista{
+  width:60%;
+}
+
+.listaTarefas{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  list-style-type: none;
+  background-color: rgb(37, 50, 70);
+  padding:15px;
+  border-radius: 10px;
+}
+
+.listaTarefas li{
+  background-color: rgb(61, 78, 104);
+  padding:10px;
+  margin-bottom: 10px;
+  border-radius:3px;
+  color:whitesmoke;
+  width:100%;
+  text-align: start;
+}
+
+.containerAddTarefa{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding:20px;
+  background-color: rgb(96, 123, 163);
+  border-radius: 10px;
+  width:60%;
+}
+
+.containerAddTarefa input{
+  width: 50%;
+  height:30px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.containerAddTarefa button{
+  width:300px;
+  height:35px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  background-color: rgb(41, 43, 66);
+  color:whitesmoke;
+}
