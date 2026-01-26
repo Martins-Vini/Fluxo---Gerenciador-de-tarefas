@@ -25,13 +25,43 @@ function App(){
     }
 
   ])
+
+  function onTaskClick(taskId){
+    const newTasks = tasks.map(task =>{
+      if(task.id === taskId){
+        return {...task, isCompleted: !task.isCompleted}
+      }
+
+      return task;
+    })
+
+    setTasks(newTasks)
+  }
+
+  function deleteTask(taskId){
+    const newTasks = tasks.filter(task => task.id !== taskId);
+
+    setTasks(newTasks)
+  }
+
+  function addTask(title, description){
+    const newTask = {
+      id:tasks.length+1,
+      title:title,
+      description:description,
+      isCompleted: false
+    }
+
+    setTasks([...tasks, newTask])
+  }
+
   return(
-    <div className="telaPrincipal">
+    <div className="telaPrincipal"> 
       <div>
-          <h1 className="titulo">Gerenciador de tarefas</h1>
+          <h1 className="titulo">Fluxo - Gerenciador de tarefas</h1>
       </div>
-      <AddTask />    
-      <Tasks tasks={tasks}/> 
+      <AddTask onAddTask={addTask} />    
+      <Tasks tasks={tasks} onTrashButtonClick={deleteTask} onTaskClick={onTaskClick}/> 
     </div>
   )
 }

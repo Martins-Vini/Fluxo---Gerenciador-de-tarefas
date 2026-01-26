@@ -1,70 +1,125 @@
-
-.telaPrincipal{
-  display:flex;
+.telaPrincipal {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height:100vh;
-  background-color:rgb(151, 171, 214);
+  height: 110vh;
+  background-color: rgb(151, 171, 214);
   padding: 30px;
 }
 
-.titulo{
+.titulo {
   color: rgb(33, 31, 48);
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.171);
   text-align: center;
   font-size: 3em;
 }
 
-.containerLista{
-  width:60%;
+.containerAddTarefa {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgb(96, 123, 163);
+  border-radius: 10px;
+  width: 60%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.233);
+  margin-bottom: 30px;
 }
 
-.listaTarefas{
-  display:flex;
+
+.containerAddTarefa input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  padding:3px;
+  border:none;
+}
+
+.containerAddTarefa input:hover {
+  outline: 3px solid rgb(38, 52, 61);
+}
+
+.containerAddTarefa button {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  background-color: rgb(41, 43, 66);
+  color: whitesmoke;
+}
+
+.containerLista {
+  width: 60%;
+}
+
+.listaTarefas {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   list-style-type: none;
   background-color: rgb(37, 50, 70);
-  padding:15px;
+  padding: 15px;
   border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.233);
 }
 
-.listaTarefas li{
-  background-color: rgb(61, 78, 104);
-  padding:10px;
-  margin-bottom: 10px;
-  border-radius:3px;
-  color:whitesmoke;
-  width:100%;
-  text-align: start;
-}
-
-.containerAddTarefa{
+.listaTarefas li {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  padding:20px;
-  background-color: rgb(96, 123, 163);
-  border-radius: 10px;
-  width:60%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(61, 78, 104);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  color: whitesmoke;
+  width: 100%;
+  text-align: left;
 }
 
-.containerAddTarefa input{
-  width: 50%;
-  height:30px;
-  border-radius: 8px;
-  margin-bottom: 15px;
+.listaTarefas li button.btnVerInfo {
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  background-color: rgb(32, 50, 73);
 }
 
-.containerAddTarefa button{
-  width:300px;
-  height:35px;
-  border-radius: 30px;
-  font-size: 1.5em;
-  background-color: rgb(41, 43, 66);
-  color:whitesmoke;
+.listaTarefas li button.btnVerInfo:hover {
+  outline: none;
+}
+
+.listaTarefas li button.btnDelInfo {
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  background-color: rgb(32, 50, 73);
+}
+
+.listaTarefas li button.btnDelInfo:hover {
+  outline: none;
+}
+
+
+button.lista {
+  background-color: rgb(61, 78, 104);
+  border: none;
+  color: white;
+}
+
+.tarefaCompleta {
+  background-color: rgb(61, 78, 104);
+  border: none;
+  text-decoration: line-through;
+  color: rgb(224, 107, 107);
+}
+
+.tarefaIncompleta {
+  background-color: rgb(61, 78, 104);
+  border: none;
+  color: white;
 }
