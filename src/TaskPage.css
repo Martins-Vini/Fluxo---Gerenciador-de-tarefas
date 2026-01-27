@@ -1,0 +1,29 @@
+.newBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 110vh;
+    background-color: rgb(151, 171, 214);
+    padding: 30px;
+}
+
+
+.title{
+    color:rgb(67, 79, 105);
+    font-size: 3em;
+}
+
+.descriptionDiv{
+    padding:15px;
+    background-color: rgb(223, 232, 248);
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+.voltar{
+    background-color: rgb(16, 30, 43);
+    padding:5px;
+    border-radius: 5px;
+    color: white;
+}

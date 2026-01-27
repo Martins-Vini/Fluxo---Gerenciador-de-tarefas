@@ -1,5 +1,6 @@
 import Tasks from "./components/Tasks.jsx"
 import AddTask from "./components/AddTask.jsx"
+import {v4} from "uuid"
 import { useState } from "react"
 import "./App.css"
 
@@ -46,12 +47,12 @@ function App(){
 
   function addTask(title, description){
     const newTask = {
-      id:tasks.length+1,
+      id:v4(),
       title:title,
       description:description,
       isCompleted: false
     }
-
+           
     setTasks([...tasks, newTask])
   }
 

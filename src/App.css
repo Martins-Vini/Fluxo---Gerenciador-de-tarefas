@@ -72,7 +72,7 @@
 .listaTarefas li {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: rgb(61, 78, 104);
   padding: 10px;
   margin-bottom: 10px;

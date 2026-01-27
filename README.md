@@ -28,3 +28,21 @@ O projeto utiliza uma stack moderna para garantir performance e simplicidade:
 1. **Nome da Tarefa:** Digite o título da sua atividade (ex: "Reunião de Planejamento").
 2. **Descrição:** Insira os detalhes necessários (ex: "Discutir as metas do próximo trimestre e definir prazos").
 3. **Adicionar:** Clique no botão
+
+# Executando projeto:
+
+1° Passo: (Para instalar todas as dependências)
+
+```bash
+
+npm i
+
+```
+
+2° Passo: (Para rodar o projeto e ter acesso as páginas)
+
+```bash
+
+npm run dev
+
+```
