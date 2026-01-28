@@ -9,7 +9,7 @@ function Tasks({tasks, onTaskClick, onTrashButtonClick}){
         query.set("title", task.title)
         query.set("description", task.description)
         navigate(`/task?${query.toString()}`)
-     }
+}
 
     return(
         <div className="containerLista">
@@ -23,7 +23,7 @@ function Tasks({tasks, onTaskClick, onTrashButtonClick}){
                         {task.isCompleted ? " - Completa" : " - Incompleta"}
                     </button>
                 
-                    <div>
+                    <div className="btnOptions">
                         <button onClick={() => onSeeDetailsClick(task)} className="btnVerInfo"><ChevronRightIcon /></button>
                         <button onClick={()=> onTrashButtonClick(task.id)} className="btnDelInfo"><TrashIcon /></button>
                     </div>

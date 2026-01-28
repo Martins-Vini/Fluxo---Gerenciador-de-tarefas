@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 110vh;
+  height:auto;
   background-color: rgb(151, 171, 214);
   padding: 30px;
 }
@@ -12,7 +12,7 @@
   color: rgb(33, 31, 48);
   text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.171);
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .containerAddTarefa {
@@ -45,7 +45,7 @@
 
 .containerAddTarefa button {
   width: 100%;
-  height: 35px;
+  height: auto;
   border-radius: 5px;
   font-size: 1.5em;
   background-color: rgb(41, 43, 66);
@@ -122,4 +122,11 @@ button.lista {
   background-color: rgb(61, 78, 104);
   border: none;
   color: white;
+}
+
+.btnOptions{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-around;
 }
