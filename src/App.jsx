@@ -5,28 +5,34 @@ import { useState, useEffect } from "react"
 import "./App.css"
 
 function App(){
-  const [tasks, setTasks] = useState(  
-      JSON.parse(localStorage.getItem("tasks")) || [])
+  const [tasks, setTasks] = useState([])
 
-  useEffect(()=>{ 
-    localStorage.setItem("tasks" , JSON.stringify(tasks))
-  }, [tasks])
+  useEffect(() => {
+    async function fetchTasks() {
+      const response = await fetch('http://localhost:8080/tasks');
+      const data = await response.json();
+      setTasks(data);
+    }
+    fetchTasks();
+  }, []);
 
-  useEffect(()=>{
-      async function consumeAPI(){
-         const response = await fetch('https://jsonplaceholder.typicode.com/todos/?_limit=10',
-          {
-            method:"GET",
-          }
-         );
-         const data = await response.json();
-         console.log(data);
 
-         setTasks(data)
-      }
+  async function addTask(title, description) {
+    const newTask = {
+      id: v4(),
+      title: title,
+      description: description,
+      isCompleted: false
+    };
 
-      consumeAPI()
-  }, [])
+    await fetch('http://localhost:8080/tasks', {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newTask)
+    });
+
+    setTasks([...tasks, newTask]);
+  }
 
   function onTaskClick(taskId){
     const newTasks = tasks.map(task =>{
@@ -44,17 +50,6 @@ function App(){
     const newTasks = tasks.filter(task => task.id !== taskId);
 
     setTasks(newTasks)
-  }
-
-  function addTask(title, description){
-    const newTask = {
-      id:v4(),
-      title:title,
-      description:description,
-      isCompleted: false
-    }
-           
-    setTasks([...tasks, newTask])
   }
 
   return(

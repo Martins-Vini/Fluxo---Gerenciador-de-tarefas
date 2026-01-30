@@ -1,0 +1,23 @@
+# Conexão com o banco de dados
+
+import sqlite3 from "sqlite3";
+import { open } from "sqlite";
+
+export async function getDbConnection() {
+    return open({
+        filename: './data.db',
+        driver: sqlite3.Database,
+    });
+}
+
+export async function initDb() {
+    const db = await getDbConnection();
+    await db.exec(`
+        CREATE TABLE IF NOT EXISTS tasks (
+            id INTEGER PRIMARY_KEY, 
+            title TEXT, 
+            description TEXT, 
+            isCompleted INTEGER
+        )
+    `);
+}
